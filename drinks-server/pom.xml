@@ -1,0 +1,104 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>  
+  <artifactId>drinks-server</artifactId>
+  
+  <name>Drinks Server</name>
+  
+	<parent>
+		<groupId>com.phoenixnap.oss</groupId>
+		<artifactId>springmvc-raml-plugin-sample</artifactId>
+		<version>0.0.1</version>
+	</parent>
+	
+	<properties>
+		<raml-path>src/main/resources/public/raml/api.raml</raml-path>	
+		<base-package>com.phoenixnap.oss.sample.server.rest</base-package>				
+	</properties>
+	
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-security</artifactId>		    
+		</dependency>
+		
+		<dependency>
+		    <groupId>joda-time</groupId>
+		    <artifactId>joda-time</artifactId>		    
+		</dependency>
+		
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>						
+		</dependency>
+		
+		<dependency>
+		    <groupId>commons-lang</groupId>
+		    <artifactId>commons-lang</artifactId>
+			<optional>true</optional>
+		</dependency>
+	</dependencies>
+
+	
+	<build>
+		<plugins>	
+
+			<!-- Required to build the executable jar file -->
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+
+			<!-- required for adding generated sources -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>		
+				<executions>
+					<execution>					        	
+						<phase>generate-sources</phase>
+						<goals><goal>add-source</goal></goals>
+						<configuration>
+							<sources>
+								<!-- where to find the generated sources --> 
+								<source>${output-relative-path}</source>
+							</sources>
+						</configuration>
+					</execution>
+				</executions>									
+			</plugin>
+			
+			<plugin>
+				<groupId>com.phoenixnap.oss</groupId>
+				<artifactId>springmvc-raml-plugin</artifactId>
+
+				<configuration>							
+					<rule>com.phoenixnap.oss.ramlapisync.generation.rules.Spring4ControllerDecoratorRule</rule>					
+				</configuration>					
+				<executions>
+					<execution>
+						<id>generate-springmvc-controllers</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>generate-springmvc-endpoints</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>			
+		</plugins>
+	</build>
+	
+	<!-- 
+	<profiles>
+		<profile>
+			<id>generate-controllers</id>
+			
+		</profile>
+	</profiles>
+  
+  -->
+  
+</project>
