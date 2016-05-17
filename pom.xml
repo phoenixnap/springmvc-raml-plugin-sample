@@ -2,9 +2,28 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.phoenixnap.oss</groupId>
 	<artifactId>springmvc-raml-plugin-sample</artifactId>
+	
+	<description>A project which generates a client-server implementation of the Spring MVC-RAML plugin</description
+	<url>https://github.com/phoenixnap/springmvc-raml-plugin-sample/</url>
 	<name>Spring MVC RAML Synchronizer Sample</name>
 	<version>0.0.1</version>
 	<packaging>pom</packaging>
+	
+	<developers>
+		<developer>
+			<name>Kris Galea</name>
+			<email>kristiang@phoenixnap.com</email>
+			<organization>PhoenixNAP</organization>
+      		<organizationUrl>http://www.phoenixnap.com</organizationUrl>
+		</developer>		
+	</developers>
+	
+	<licenses>
+	  <license>
+		<name>The Apache License, Version 2.0</name>
+		<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+	  </license>
+	</licenses>
 	
 	<parent>
 		<groupId>org.springframework.boot</groupId>

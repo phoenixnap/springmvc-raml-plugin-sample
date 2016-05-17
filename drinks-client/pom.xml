@@ -1,6 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>  
   <artifactId>drinks-client</artifactId>  
+  
+  <description>Client implementation offering client side consumption of the endpoints exposed by the server and defined in the RAML document</description>
+  <url>https://github.com/phoenixnap/springmvc-raml-plugin-sample/</url>
   <name>Drinks Client</name>
   
     <parent>
@@ -8,6 +11,22 @@
 		<artifactId>springmvc-raml-plugin-sample</artifactId>
 		<version>0.0.1</version>
 	</parent>
+	
+	<developers>
+		<developer>
+			<name>Kris Galea</name>
+			<email>kristiang@phoenixnap.com</email>
+			<organization>PhoenixNAP</organization>
+      		<organizationUrl>http://www.phoenixnap.com</organizationUrl>
+		</developer>		
+	</developers>
+	
+	<licenses>
+	  <license>
+		<name>The Apache License, Version 2.0</name>
+		<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+	  </license>
+	</licenses>
   
   <properties>
 	<raml-path>../drinks-server/src/main/resources/public/raml/api.raml</raml-path>	

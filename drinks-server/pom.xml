@@ -1,9 +1,28 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>  
   <artifactId>drinks-server</artifactId>
+  <description>Server implementation of raml generated controllers. Provides a 
+  simple CRUD implementation in the form of a drinks service.</description>
   
   <name>Drinks Server</name>
+  <url>https://github.com/phoenixnap/springmvc-raml-plugin-sample/</url>
   
+	<developers>
+		<developer>
+			<name>Kris Galea</name>
+			<email>kristiang@phoenixnap.com</email>
+			<organization>PhoenixNAP</organization>
+      		<organizationUrl>http://www.phoenixnap.com</organizationUrl>
+		</developer>		
+	</developers>
+	
+	<licenses>
+	  <license>
+		<name>The Apache License, Version 2.0</name>
+		<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+	  </license>
+	</licenses>
+	
 	<parent>
 		<groupId>com.phoenixnap.oss</groupId>
 		<artifactId>springmvc-raml-plugin-sample</artifactId>
