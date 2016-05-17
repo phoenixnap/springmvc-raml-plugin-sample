@@ -1,5 +1,5 @@
 ![PhoenixNAP Logo](https://phoenixnap.com/wp-content/themes/phoenixnap-v2/img/v2/logo.svg)
-## Spring MVC-RAML Synchronizer Sample [![Apache License 2](https://img.shields.io/badge/license-ASF2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0.txt) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.phoenixnap.oss/springmvc-raml-plugin-sample/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.phoenixnap.oss/springmvc-raml-plugin-sample/badge.svg)
+## Spring MVC-RAML Synchronizer Sample [![Apache License 2](https://img.shields.io/badge/license-ASF2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0.txt)
 
 The Spring MVC-RAML Synchronizer Sample is an implementation of the Spring MVC-RAML plugin available [here](https://github.com/phoenixnap/springmvc-raml-plugin) . 
 
