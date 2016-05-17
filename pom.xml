@@ -3,7 +3,7 @@
 	<groupId>com.phoenixnap.oss</groupId>
 	<artifactId>springmvc-raml-plugin-sample</artifactId>
 	
-	<description>A project which generates a client-server implementation of the Spring MVC-RAML plugin</description
+	<description>A project which generates a client-server implementation of the Spring MVC-RAML plugin</description>
 	<url>https://github.com/phoenixnap/springmvc-raml-plugin-sample/</url>
 	<name>Spring MVC RAML Synchronizer Sample</name>
 	<version>0.0.1</version>
