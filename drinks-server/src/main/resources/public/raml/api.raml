@@ -1,0 +1,156 @@
+
+#%RAML 0.8
+  resourceTypes:
+  - standard:
+      get?:
+        responses:          
+          400:
+            description: |
+              The request sent to the server contains data which is not as expected e.g. incorrect drink type
+          404:
+            description: |
+              The requested resource was not found                     
+      put?:
+        responses:          
+          404:
+            descrption: |
+              The requested resource on which the modification is being attempted was not found              
+      delete?:
+        responses:          
+          404:
+            descrption: | 
+              The requested resource to delete was not found 
+ 
+  title: Drinks Services
+  version: ${project.version}
+  mediaType: application/json
+  baseUri: /
+  /drinks:
+    description: Provides interaction with 'Drink' resource  
+    get:
+      description: Retrieves a list of available drinks.      
+      responses:
+        200:        
+          body:
+            application/json:
+              schema: |
+                {
+                  "$schema": "http://json-schema.org/draft-04/schema#",
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "type",
+                      "name"
+                    ]
+                  }
+                }
+  
+    post:
+      description: Creates a new drink. 
+      body:
+        application/json:
+          schema: | 
+            {
+              "type":"object",
+              "properties":{
+                "type":"object",
+                "name": {
+                  "type" : "string"
+                }
+              }              
+            }
+
+    /{drinkName}:    
+      uriParameters:
+        drinkName:
+          displayName: DrinkName
+          description: |
+            The name of the drink for info
+            required: true
+            type: string
+      
+      get:
+        description: Retrieves details for a specific drink. 
+        responses:
+          200:          
+            body:
+              application/json:
+                schema: |
+                  {
+                    "$schema": "http://json-schema.org/draft-04/schema#",
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "type",
+                      "name"
+                    ]
+                  }
+  
+      put:      
+        description: Modify an existing drink. 
+        body:
+          application/json:
+            schema: |
+              { 
+                "type":"object",
+                "properties":{      
+                            
+                  "name": {
+                    "type" : "string"
+                  }
+                }
+              }
+      delete:
+        description: Delete an existing drink. 
+  /healthCheck:
+    description: Provides server health check 
+    get:
+      description: Retrieves the server's health status. 
+      responses:
+        200:
+          body:
+            application/json:
+              schema: |
+                {
+                  "$schema": "http://json-schema.org/draft-04/schema#",
+                  "type": "object",
+                  "properties": {
+                    "timestamp": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "timestamp",
+                    "status"
+                  ]
+                }
+     
+            
+      
+              
+
+             
+
+        
+          
+ 
+ 

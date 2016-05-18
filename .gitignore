@@ -1,0 +1,8 @@
+*.ipr
+*.iml
+/.metadata
+.project
+.settings
+.classpath
+target
+/iconv.dll
