@@ -66,8 +66,8 @@
 		
 		<dependency>
 			<groupId>com.phoenixnap.oss</groupId>
-			<artifactId>drinks-server</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<artifactId>drinks-server</artifactId>		
+			<version>${project.version}</version>
 			<scope>test</scope>
 		</dependency>
 		
